@@ -28,7 +28,7 @@ const user = require('../Models/UserSchema')
  const DeleteDataUser = async(req,res)=>{
     try {
         const deletedUser = await user.findByIdAndDelete(req.params.idUser)
-        res.json({msg:'User has been deleted succ !!'})
+        res.json({msg:'User has been deleted succ !!', deletedUser })
     } catch (error) {
         console.log(error)
     }
